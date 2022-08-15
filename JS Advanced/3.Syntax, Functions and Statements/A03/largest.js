@@ -8,7 +8,7 @@ function largest(a, b, c){
     } else{
         result = c;
     }
-    console.log('The largest number is ' + result +'.')
+    console.log(`The largest number is ${result}.`)
 }
 
 largest(3 ,4 ,5);
