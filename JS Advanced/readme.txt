@@ -1,4 +1,4 @@
-#JS Advanced
+# Java-Script Advanced
 
 3.Syntax, Functions and Statements;
 4.Exercise: Syntax, Functions and Statements;
