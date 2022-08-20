@@ -1,0 +1,1 @@
+Pascal or Camel Case
