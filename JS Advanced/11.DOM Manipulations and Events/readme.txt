@@ -1,0 +1,6 @@
+DOM Manipulations and Events
+
+• Creating and Manipulating Elements;
+• Handling Events;
+• Event Types;
+• Event Object Properties and Methods.
