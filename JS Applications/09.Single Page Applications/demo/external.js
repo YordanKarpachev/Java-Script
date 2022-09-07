@@ -1,0 +1,1 @@
+import { tranferedData } from './app.js'
