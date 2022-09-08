@@ -1,28 +1,32 @@
+import { showAbout } from "./about.js";
+import { showCatalog } from "./catalog.js";
+import { showHome } from "./home.js";
 
 
 document.querySelector('nav').addEventListener('click', onNavigate);
 
-showView('homeView');
+showHome();
 
 const sections ={
-    'homeBtn' : 'homeView',
-    'catalogBtn': 'catalogView',
-    'aboutBtn': 'aboutView'
+    'homeBtn' : showHome,
+    'catalogBtn':showCatalog,
+    'aboutBtn': showAbout
 };
 
 
 function onNavigate(event){
-    if(event.target.tagName == 'BUTTON'){
-           const sectionId = sections[event.target.id];
-            showView(sectionId);
+    if(event.target.tagName == 'A'){
+        
+        const view = sections[event.target.id];
+        if(typeof view == 'function'){
+            event.preventDefault();
+
+            document.querySelectorAll('section').forEach(s => s.style.display ='none');
+            view();
+        }
+            
 
     }
-}
-
-
-function showView (id){
-    document.querySelectorAll('section').forEach(s => s.style.display ='none');
-    document.getElementById(id).style.display ='';
 }
 
 
