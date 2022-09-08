@@ -1,4 +1,7 @@
+const section =     document.getElementById('aboutView');
+section.remove();
+
 export function showAbout(){
 
-    document.getElementById('aboutView').style.display ='block';
+document.querySelector('main').replaceChildren(section);
 }

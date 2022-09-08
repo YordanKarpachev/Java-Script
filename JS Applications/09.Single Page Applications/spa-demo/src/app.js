@@ -20,8 +20,6 @@ function onNavigate(event){
         const view = sections[event.target.id];
         if(typeof view == 'function'){
             event.preventDefault();
-
-            document.querySelectorAll('section').forEach(s => s.style.display ='none');
             view();
         }
             
