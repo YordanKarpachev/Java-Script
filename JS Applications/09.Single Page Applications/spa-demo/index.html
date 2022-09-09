@@ -1,40 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-  <title>SPA Demo</title>
-  <script src="src/app.js" type="module"></script>
+    <title>SPA Demo</title>
+    <script src="src/app.js" type="module"></script>
 
-  <style>
-    #views {
-        display: none;
-    }
-  </style>
+    <style>
+        #views {
+            display: none;
+        }
+
+        label {
+            display: block;
+        }
+    </style>
 
 </head>
+
 <body>
     <nav>
         <a href="/" id="homeBtn">Home</a>
         <a href="/" id="catalogBtn">Catalog</a>
         <a href="/" id="aboutBtn">About</a>
+        <div id="guestNav">
+
+            <a href="/" id="loginBtn">Login</a>
+            <a href="/" id="registerBtn">Register</a>
+        </div>
+        <div id="userNav">
+            <a href="javascript:void(0)" id="registerBtn">Register</a>
+        </div>
     </nav>
     <h1>SPA Demo</h1>
-    <main>    </main>
+    <main> </main>
 
-        <div id="views">
-            <section id="homeView">
-                <h2>Home Page</h2>
-                <p>Welcome to our side!</p>
-            </section>
-    
-            <section id="catalogView">
-                <h2>Catalog</h2> <ul></ul >
-            </section>
-    
-            <section id="aboutView">
-                <h2>About us</h2><p>Phone: 0176...</p>
-            </section>
-        </div>
+    <div id="views">
+        <section id="homeView">
+            <h2>Home Page</h2>
+            <p>Welcome to our side!</p>
+        </section>
+
+        <section id="catalogView">
+            <h2>Catalog</h2>
+            <ul></ul>
+        </section>
+
+        <section id="aboutView">
+            <h2>About us</h2>
+            <p>Phone: 0176...</p>
+        </section>
+
+        <section id="loginView">
+            <h2>Login</h2>
+            <form>
+                <label> E-mail <input type="text" name="email"></label>
+                <label> Password <input type="password" name="password"></label>
+                <input type="submit" value="Sing in">
+            </form>
+        </section>
+
+        <section id="registerView">
+            <h2>Login</h2>
+            <form>
+                <label> E-mail <input type="text" name="email"></label>
+                <label> Password <input type="password" name="password"></label>
+                <label> Repeat <input type="password" name="repass"></label>
+                <input type="submit" value="Sing Up">
+            </form>
+        </section>
+    </div>
 
 </body>
+
 </html>

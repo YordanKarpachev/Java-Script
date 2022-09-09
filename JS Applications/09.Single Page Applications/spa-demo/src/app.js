@@ -1,6 +1,8 @@
+import { showLogin } from "../login.js";
 import { showAbout } from "./about.js";
 import { showCatalog } from "./catalog.js";
 import { showHome } from "./home.js";
+import { showRegister } from "./register.js";
 
 
 document.querySelector('nav').addEventListener('click', onNavigate);
@@ -10,7 +12,9 @@ showHome();
 const sections ={
     'homeBtn' : showHome,
     'catalogBtn':showCatalog,
-    'aboutBtn': showAbout
+    'aboutBtn': showAbout,
+    'loginBtn' : showLogin,
+    'registerBtn' : showRegister,
 };
 
 
@@ -27,5 +31,10 @@ function onNavigate(event){
     }
 }
 
-
-
+function checkUserNav(){
+    const userData = sessionStorage.getItem('userData');
+    if(userData != null){
+        document.getElementById('userNav').style.display = 'inline-block';
+        document.getElementById('guestNav').style.display = 'none';
+    }
+}
