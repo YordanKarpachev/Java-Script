@@ -1,0 +1,11 @@
+article p {
+    background: yellow;
+}
+
+article#red-article {
+    background: red;
+}
+
+.text-center {
+    text-align: center;
+}
