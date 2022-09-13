@@ -1,11 +1,13 @@
-function circle(radius) {
-    if (typeof radius == String) {
-        let area = radius ** 2 * Math.PI;
+function solve(input) {
+    let type = typeof (input);
 
-        console.log(area.toFixed(2));
-    } else{
-        console.log(`We can not calculate the circle area, because we receive a ${typeof radius}.`)
+    if (type !== 'number') {
+        console.log(`We can not calculate the circle area, because we receive a ${type}.`);
+        return;
     }
+
+    let output = input * input * Math.PI;
+    console.log(output.toFixed(2));
 }
 
-circle("d");
+solve(5);
