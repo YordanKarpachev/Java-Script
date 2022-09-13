@@ -1,6 +1,7 @@
-function largest(a, b, c){
-    
-    console.log(`The largest number is ${Math.max(a, b ,c)}.`)
-}
+function solve(num, num2, num3){
+    let larges = Math.max(num, num2, num3);
+    console.log(`The largest number is ${larges}.`);
 
-largest(3 ,4 ,5);
+};
+
+solve(5, -3, 16);
