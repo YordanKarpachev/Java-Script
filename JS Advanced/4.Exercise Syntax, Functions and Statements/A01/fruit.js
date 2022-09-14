@@ -1,8 +1,6 @@
-function fruit(fruitName, weightInGram, pricePerKg){
-let kilograms = weightInGram / 1000;
-let price = kilograms * pricePerKg;
-console.log(`I need $${price.toFixed(2)} to buy ${kilograms.toFixed^(2)} kilograms ${fruitName}.`)
+function solve(type, gram, price){
+console.log(`I need $${(gram / 1000 * price).toFixed(2)} to buy ${(gram / 1000).toFixed(2)} kilograms ${type}.`);
 
 }
 
-fruit('orange', 2500, 1.80)
+solve('orange', 2500, 1.80);
