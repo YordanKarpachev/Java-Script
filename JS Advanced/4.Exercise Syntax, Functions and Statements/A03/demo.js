@@ -1,22 +1,22 @@
-function demo(input) {
-
-    let inputNumber = input.toString();
-    let istSame = true;
+function solve(num) {
+    let n = num % 10;
     let sum = 0;
-    let digitToCompare = inputNumber[0];
-    const numberL =  inputNumber.length;
+    let output = true;
 
-    for(let i = 0; i < numberL ; i++){
+    while (num > 0) {
+        let current = num % 10;
 
-        sum +=  +inputNumber[i];
-        if(digitToCompare !== inputNumber[i]){
-            istSame = false;
+        if (current != n) {
+            output = false;
         }
+        sum += current;
+       num = Math.floor (num /= 10);
+
     }
-    console.log(istSame);
+    console.log(output);
     console.log(sum);
 
-
-
 }
-demo(2222222);
+
+solve(2222222);
+solve(1234);
