@@ -1,0 +1,15 @@
+input[type="submit"] {
+    background: red;
+    color: white;
+    background: darkgray;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 4px;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 4;
+    border-radius: 4;
+    border-radius: 1;
+    cursor: pointer;
+}
