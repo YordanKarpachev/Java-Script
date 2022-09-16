@@ -1,15 +1,8 @@
-function solve(input){
-let firstElement = input.shift();
-let lastElement = input.pop();
-let firstNumber = Number(firstElement);
-let lastNumber = Number(lastElement);
+function solve(arr){
 
-let sum = firstNumber + lastNumber;
-
-return(sum);
-
-}
-
-
-let result = solve(['20', '30', '40']);
-console.log(result);
+   return Number(arr.shift()) + Number(arr.pop());
+    
+    }
+    
+    solve(['20', '30', '40']);
+    solve(['5', '10']);
