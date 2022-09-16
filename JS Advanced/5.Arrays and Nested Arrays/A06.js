@@ -1,9 +1,21 @@
-function solve(arr) {
-    arr.sort((a, b) => a - b);
-  let second = arr.slice(arr.length / 2);
+function solve(arr, start, end) {
+ let result = [];
+let startIndex = arr.indexOf(start);
+let endIndex = arr.indexOf(end);
+
+
+let second = arr.slice(startIndex, endIndex + 1 );
+//console.log(second);
 return second;
+
 
 }
 
-solve([4, 7, 2, 5]);
-solve([3, 19, 14, 7, 2, 19, 6]);
+solve(['Pumpkin Pie','Key Lime Pie','Cherry Pie','Lemon Meringue Pie','Sugar Cream Pie'],
+'Key Lime Pie',
+'Lemon Meringue Pie');
+
+solve(['Apple Crisp','Mississippi Mud Pie','Pot Pie','Steak and Cheese Pie','Butter Chicken Pie','Smoked Fish Pie'],
+
+'Pot Pie',
+'Smoked Fish Pie');
