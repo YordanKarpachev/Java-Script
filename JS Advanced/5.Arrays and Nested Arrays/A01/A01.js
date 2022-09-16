@@ -1,14 +1,10 @@
-function solve(input){
-    let result ='';
+function solve(arr){
 
-    for(let i = 0; i < input.length; i++){
+let result = arr.filter((e, i) => i % 2 === 0);
 
-        if(i % 2 == 0){
-            result += input[i]+ ' ';
-        }
-    }
-    console.log(result);
+console.log(result.join(' '));
+
 }
 
-
-solve(['20', '30', '40', '50', '60'])
+solve(['20', '30', '40', '50', '60']);
+solve(['5', '10']);
