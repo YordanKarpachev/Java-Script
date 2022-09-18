@@ -1,23 +1,15 @@
-function arraysDemo(commands) {
+function solve(arr) {
+    let result = [];
+    let current = 1;
 
-    let output = [];
+    arr.forEach(command => {
+        command == "add" ? result.push(current) : result.pop();
+        current++;
+ });
+        result.length === 0 ? console.log("Empty") : console.log(result.join("\n"));
 
-    for (let i = 0; i < commands.length; i++) {
-        let currendCommand = commands[i];
-
-        if (currendCommand === 'add') {
-
-            output.push(i + 1);
-        } else if (currendCommand === 'remove') {
-
-            output.pop();
-        }
-
-    }
-
-    if (output.length === 0) {
-        console.log('Empty');
-    } else {
-        console.log(output.join('\n'));
-    }
 }
+
+solve(['remove', 
+'remove', 
+'remove']);
