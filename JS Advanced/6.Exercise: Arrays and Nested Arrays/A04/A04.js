@@ -1,13 +1,21 @@
+function solve(arr, mutator){
 
-function arraysDemo(array, rorations) {
-
-    for(let i = 0; i < rorations; i++){
-        let lastElement = array.pop();
-        array.unshift(lastElement);
+    for (let i = 0; i < mutator; i++) {
+        
+        arr.unshift(arr.pop())
+        
     }
+    console.log(arr.join(' '));
+    }
+    
+    solve(['1', 
+    '2', 
+    '3', 
+    '4'], 
+    2)
 
-    console.log(array.join(' '));
-}
-
-arraysDemo(['1', '2', '3', '4'], 2)
-
+    solve(['Banana', 
+    'Orange', 
+    'Coconut', 
+    'Apple'], 
+    15)
