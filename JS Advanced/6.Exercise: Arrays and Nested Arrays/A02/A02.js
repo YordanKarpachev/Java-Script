@@ -1,12 +1,12 @@
-function arraysDemo(array, step) {
-
-    let resultArr = [];
-
-    for (let index = 0; index < array.length; index += step) {
-
-        resultArr.push(array[index]);
+function solve(arr, steps){
+   return arr.filter((el, index) => {
+        return index % steps === 0;
+    });
     }
-    return resultArr;
-
-
-}
+    
+    solve(['1', 
+    '2', 
+    '3', 
+    '4', 
+    '5', '6'], 
+    2)
