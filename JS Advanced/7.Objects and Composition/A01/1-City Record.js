@@ -1,15 +1,7 @@
-function solve(city, population, treasury){
-
-    let record = {
-       
-        name: city,
+function solve(name, population, treasury) {
+    return {
+        name: name,
         population: population,
-        treasury: treasury,
-    };
-    xreturn record;
-
+        treasury: treasury
+    }
 }
-
-solve('Tortuga',
-7000,
-15000);
