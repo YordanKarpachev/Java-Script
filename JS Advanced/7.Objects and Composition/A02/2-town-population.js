@@ -1,27 +1,27 @@
-function solve(input){
-    let towns = {};
-    for (const info of input) {
-        let infoArr = info.split(' <-> ');
-        let town = infoArr[0];
-        let population = Number(infoArr[1]);
+function solve(input) {
+   
 
-        if(!towns[town]){
-            towns[town] = 0;
+    let result = {}
 
+    for(let town of input){
+        let name = town.split(' <-> ')[0];
+        let population = town.split(' <-> ')[1];
+
+        if(!result[name]){
+            result[name] = 0;
         }
-        towns[town] += population;
 
-         }
-
-         for(const town in towns){
-            console.log(`${town} : ${towns[town]}`);
-
-         }
+        result[name] += Number(population);
+    }
+   for(let key in result){
+    console.log(key + ' : ' +result[key]);
+   }
 
 }
 
-solve(['Sofia <-> 1200000',
-'Montana <-> 20000',
-'New York <-> 10000000',
-'Washington <-> 2345000',
-'Las Vegas <-> 1000000'])
+
+solve(['Istanbul <-> 100000',
+'Honk Kong <-> 2100004',
+'Jerusalem <-> 2352344',
+'Mexico City <-> 23401925',
+'Istanbul <-> 1000'])
