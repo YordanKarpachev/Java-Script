@@ -1,15 +1,22 @@
-function solve(worker) {
+function solve(input) {
 
-    if(worker.dizziness){
 
-        worker.levelOfHydrated += 0.1 * worker.experience * worker.weight;
-        worker.dizziness = false;
-    }
+      if(input.dizziness){
+        input.levelOfHydrated += 0.1 * input.experience * input.weight;
+       input. dizziness = false;
+      }
 
-    return worker;
+
+     return input;
+
 }
 
 solve({ weight: 80,
-  experience: 1,
-  levelOfHydrated: 0,
-  dizziness: true })
+    experience: 1,
+    levelOfHydrated: 0,
+    dizziness: true });
+    console.log('************');
+solve({ weight: 120,
+    experience: 20,
+    levelOfHydrated: 200,
+    dizziness: true });
