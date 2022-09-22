@@ -1,19 +1,21 @@
-
 function factory(library, orders) {
-
     let products = [];
 
-    for (const order of orders) {
+    for (let order of orders) {
+      
         let product = order.template;
-
-        for (const part of order.parts) {
-            product[part] = library[part]
+     
+        for (let part of order.parts) {
+            product[part] = library[part];
         }
         products.push(product);
-    }
-    return products;
-}
 
+    }
+
+    return products;
+
+
+}
 
 
 const library = {
