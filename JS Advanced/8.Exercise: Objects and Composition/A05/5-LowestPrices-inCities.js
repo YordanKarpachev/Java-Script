@@ -15,17 +15,13 @@ function solve(input) {
             }
 
         } else {
-            let obj ={ town, productName, price:Number(price)};
+            let obj = { town, productName, price: Number(price) };
             res.push(obj)
         }
 
     }
 
-
-    for (let output of res) {
-        console.log(`${output.productName} -> ${output.price} (${output.town})`);
-    }
-
+    res.forEach(x => { console.log(`${x.productName} -> ${x.price} (${x.town})`) })
 }
 
 solve(['Sample Town | Sample Product | 1000',
