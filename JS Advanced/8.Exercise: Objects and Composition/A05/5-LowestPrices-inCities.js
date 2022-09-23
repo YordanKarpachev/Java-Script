@@ -1,37 +1,37 @@
 function solve(input) {
 
-    let products = [];
+    let res = [];
 
-    while(input.length > 0){
+    while (input.length !== 0) {
 
-        let [town, product, price] = input.shift().split(' | ');
+        let [town, productName, price] = input.shift().split(' | ');
 
-        if(products.filter(x => x.product === product).length > 0){
+        if (res.filter(x => x.productName === productName).length > 0) {
+            let obj = res.find(x => x.productName === productName);
 
-            let obj = products.find(x => x.product === product);
-
-            if(obj.price > Number(price)){
-                obj.price = Number(price);
+            if (obj.price > price) {
+                obj.price = price;
                 obj.town = town;
             }
 
-        } else{
-            let obj = {product, town, price:Number(price)}
-            products.push(obj);
+        } else {
+            let obj ={ town, productName, price:Number(price)};
+            res.push(obj)
         }
 
     }
-    
-    for (let product of products){
-        console.log(`${product.product} -> ${product.price} (${product.town})`);
+
+
+    for (let output of res) {
+        console.log(`${output.productName} -> ${output.price} (${output.town})`);
     }
 
 }
 
 solve(['Sample Town | Sample Product | 1000',
-'Sample Town | Orange | 2',
-'Sample Town | Peach | 1',
-'Sofia | Orange | 3',
-'Sofia | Peach | 2',
-'New York | Sample Product | 1000.1',
-'New York | Burger | 10'])
+    'Sample Town | Orange | 2',
+    'Sample Town | Peach | 1',
+    'Sofia | Orange | 3',
+    'Sofia | Peach | 2',
+    'New York | Sample Product | 1000.1',
+    'New York | Burger | 10']);
