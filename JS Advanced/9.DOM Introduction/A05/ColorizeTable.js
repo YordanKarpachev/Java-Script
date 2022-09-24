@@ -1,11 +1,10 @@
 function colorize() {
- let rowElements = document.getElementsByTagName('tr');
+let rowsElement = document.getElementsByTagName('tr');
+let rows = Array.from(rowsElement);
 
- let rows = Array.from(rowElements);
-
- rows.forEach((x, i) => {
-    if(i %  2 != 0){
-        x.style.backgroundColor = 'teal';
+rows.forEach((e, i) => {
+    if(i % 2 != 0){
+        e.style.background = "teal";
     }
- });
+})
 }
