@@ -1,13 +1,7 @@
 function calc() {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
 
-    let firstNumberElement = document.getElementById('num1');
-    let secondNumberElement = document.getElementById('num2');
-
-    let firstNumber = Number(firstNumberElement.value);
-    let secondNumber = Number(secondNumberElement.value);
-   
-    let sum = firstNumber + secondNumber;
-   
-    let resultElement = document.getElementById('sum');
-    resultElement.value = sum;
+    let sum = Number(num1) + Number(num2);
+    document.getElementById("sum").value = sum
 }
