@@ -1,14 +1,19 @@
 function extract(content) {
-    let contentElement = document.getElementById(content);
-
-    let pattern = /\(([^(]+)\)/g;
-    let matches = contentElement.textContent.matchAll(pattern);
+    let para = document.getElementById(content).textContent;
+    let pattern = /\(([^)]+)\)/g;
     let result = [];
-    for (const match of matches) {
 
-        result.push(match[1])
-    };
+    let match = pattern.exec(para);
 
+    while (match) {
+        result.push(match[1]);
+       match = pattern.exec(para);
+    }
 
-   return result.join('; ');
+    return result.join('; ')
+
 }
+
+
+
+// /\(([^)]+)\)/g;
