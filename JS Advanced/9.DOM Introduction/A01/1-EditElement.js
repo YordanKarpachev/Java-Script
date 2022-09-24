@@ -1,5 +1,7 @@
-function solve(element, match, replacer) {
-    while (element.textContent.includes(match)) {
-        element.textContent = element.textContent.replace(match, replacer);
+function editElement(ref, match, replacer) {
+
+    while(ref.textContent.includes(match)){
+        ref.textContent = ref.textContent.replace(match, replacer)
     }
-};
+
+}
