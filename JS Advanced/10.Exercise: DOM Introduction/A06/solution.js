@@ -1,19 +1,20 @@
 function solve() {
- 
-  let inputElement = document.getElementById('input');
-
-  let textArr = inputElement.value.split('.').filter(s => s !== '');
- 
-  let resultDiv = document.getElementById('output');
-
-  while (textArr.length > 0) {
-    let text = textArr.splice(0, 3).join('. ') + '.';
-   
-    let p = document.createElement('p');
-    p.textContent = text;
-    resultDiv.appendChild(p);
-
-  }
+   document.querySelector('#searchBtn').addEventListener('click', onClick);
 
 
+   function onClick() {
+      let text = document.getElementById("searchField");
+      let data = Array.from(document.querySelectorAll('tbody tr'));
+
+
+      for (let e of data) {
+         e.classList.remove('select');
+
+         if (e.innerHTML.includes(text.value) && text.value !== '') {
+            e.className = 'select'
+         }
+      }
+
+      text.value = '';
+   }
 }
