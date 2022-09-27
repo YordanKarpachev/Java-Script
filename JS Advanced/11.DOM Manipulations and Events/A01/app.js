@@ -1,7 +1,12 @@
 function addItem() {
-    let inputElement = document.getElementById('newItemText');
-    let itemsElement = document.getElementById('items');
-    let liElement = document.createElement('li');
-    liElement.textContent = inputElement.value;
-    itemsElement.appendChild(liElement);
+let input = document.getElementById('newItemText');
+let items = document.getElementById('items');
+
+let newInputValue = input.value;
+let litItem = document.createElement('li');
+litItem.textContent = newInputValue;
+items.appendChild(litItem);
+input.value = ('');
+
+
 }
