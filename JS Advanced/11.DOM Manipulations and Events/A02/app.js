@@ -1,17 +1,16 @@
 function deleteByEmail() {
- 
-let emailInputElement = document.querySelector('input[name="email"]');
-let emailCellElement = document.querySelectorAll('tr td:nth-of-type(2)');
-let resultElement = document.getElementById('result');
+ let input =    document.querySelector('input');
 
-let emailElements = Array.from(emailCellElement);
-let targetElement = emailElements.find(x => x.textContent == emailInputElement.value);
+ let emails = document.querySelectorAll('#customers td:nth-child(2)');
+ let find = false;
+    for(let email of emails){
+        if(email.textContent == input.value){
+         email.parentElement.remove();
+         find = true;
+        }
+    }
+    
+    let result = document.getElementById('result');
+    result.textContent = find ? 'Deleted' : 'Not found.'
 
-
-if(targetElement){
-targetElement.parentNode.remove();
-resultElement.textContent = 'Deleted.'
-} else{
-    resultElement.textContent = 'Not found.'
-}
 }
