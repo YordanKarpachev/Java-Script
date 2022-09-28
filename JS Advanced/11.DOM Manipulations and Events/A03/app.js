@@ -1,18 +1,18 @@
-function addItem() {
-let itemsElement = document.getElementById('items');
-let inputElement = document.getElementById('newItemText');
+function deleteByEmail() {
+let input = document.querySelector('input');
 
-let liElement = document.createElement('li');
-liElement.textContent = inputElement.value;
+let emails = document.querySelectorAll('#customers td:nth-child(2)');
+let find = false;
 
-let deleteElement = document.createElement('a');
-deleteElement.href = '#';
-deleteElement.textContent = '[Delete]';
-deleteElement.addEventListener('click', (e) => {
-    e.currentTarget.parentElement.remove();
-});
+for(let email of emails){
 
-liElement.appendChild(deleteElement);
+    if(email.textContent == input.value){
+        email.parentNode.remove();
+        find = true;
+    }
 
-itemsElement.appendChild(liElement);
+}
+let result = document.getElementById('result');
+result.textContent = find ? 'Deleted' : 'Not found.'
+
 }
