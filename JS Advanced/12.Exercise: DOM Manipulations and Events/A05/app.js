@@ -5,18 +5,18 @@ function encodeAndDecodeMessages() {
 
     function coder() {
         let result = "";
-        let textAreas = document.querySelectorAll('textarea');
-        let currentText = textAreas[0].value;
+        let textArea = document.querySelectorAll('textarea');
+        let currentText = textArea[0].value;
 
         for (let i = 0; i < currentText.length; i++) {
-            let currentCh = currentText[i].charCodeAt();
-            result += String.fromCharCode(currentCh + 1);
+            let currentChar = currentText[i].charCodeAt();
+            result += String.fromCharCode(currentChar + 1);
 
         }
-        let resultTextArea = textAreas[1];
-        resultTextArea.value = result;
-        let currentTextArea = textAreas[0]
+        let currentTextArea = textArea[0];
         currentTextArea.value = "";
+        let resultTextArea = textArea[1];
+        resultTextArea.value = result;
     }
 
 
@@ -24,13 +24,13 @@ function encodeAndDecodeMessages() {
     function decoder(e) {
         let currentArea = e.target.parentElement.children[1];
         let currentText = currentArea.value;
-        let resultMsg = "";
+        let result = "";
         for (let i = 0; i < currentText.length; i++) {
-            let ch = currentText[i].charCodeAt();
-            resultMsg += String.fromCharCode(ch - 1);
+            let ch = textInput[i].charCodeAt();
+            result += String.fromCharCode(ch - 1);
 
         }
 
-        currentArea.value = resultMsg;
+        currentArea.value = result;
     }
 }
