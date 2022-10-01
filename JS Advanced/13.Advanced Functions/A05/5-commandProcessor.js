@@ -1,28 +1,32 @@
-function solution(){
-    let result = '';
+function solution() {
+    let res = "";
     return {
-        append(str){
-            result += str;
-
-        }, 
-        removeStart(num){
-
-            result = result.substring(num);
+        append(string) {
+            res += string;
         },
-        removeEnd(num){
-            result = result.substring(0, result.length - num);
+        removeStart(n) {
+            res = res.substring(n)
         },
-        print(){
-            console.log(result);
+        removeEnd(n) {
+            res = res.substring(0, res.length  - n)
+        },
+        print() {
+            console.log(res);
         }
-
     };
+
 }
 
-let firstZeroTest = solution();
 
-firstZeroTest.append('hello');
-firstZeroTest.append('again');
-firstZeroTest.removeStart(3);
-firstZeroTest.removeEnd(4);
-firstZeroTest.print();
+
+
+
+console.log('------------');
+
+let secondZeroTest = solution();
+
+secondZeroTest.append('123');
+secondZeroTest.append('45');
+secondZeroTest.removeStart(2);
+secondZeroTest.removeEnd(1);
+secondZeroTest.print();
