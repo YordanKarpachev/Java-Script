@@ -1,27 +1,24 @@
-function solve() {
+function solve(...params) {
+    let res = {};
 
-    let data = {};
+    for (let e of params) {
+        let type = typeof (e);
 
-    Array.from(arguments).forEach((line) => {
-        let type = typeof line
-        console.log(`${type}: ${line}`);
-
-        if (!data[type]) {
-            data[type] = 0;
-
+        console.log(`${type}: ${e}`);
+        if (!res[type]) {
+            res[type] = 0;
         }
-        data[type]++;
-    });
-        Object.keys(data)
-        .sort((a,b) => 
-            data[b] - data[a])
-            .forEach((key) => console.log(`${key} = ${data[key]}`));
-        
-    
 
-
+        res[type]++;
+    }
+    let buff = "";
+    for (let [k, v] of Object.entries(res)) {
+        buff += `${k} = ${v}\n`
+    }
+    console.log(buff);
 
 }
 
 
-solve('cat', 42, function () { console.log('Hello world!'); });
+solve('cat', 42, function () { console.log('Hello world!'); }
+);
