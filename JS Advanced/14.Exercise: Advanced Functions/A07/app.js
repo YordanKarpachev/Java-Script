@@ -1,32 +1,24 @@
 function calculator() {
- let input1;
- let input2;
- let result;
+    let sel;
+    let sel2;
+    let resSel;
+    return {
+        init: (selector1, selector2, resultSelector) => {
+            sel = document.querySelector(selector1);
+            sel2 = document.querySelector(selector2);
+            resSel = document.querySelector(resultSelector);
 
- function init(selector1, selector2, resultSelector){
-
-    input1 = document.querySelector(selector1);
-    input2 = document.querySelector(selector2);
-    result = document.querySelector(resultSelector);
-
- }
-
- function add(){
-    result.value = Number(input1.value) + Number(input2.value);
- }
-
-function subtract (){
-    result.value = Number(input1.value) - Number(input2.value);
-}
-
-return  {
-    init,
-    add,
-    subtract
-}
-
+        },
+        add: () => {
+            resSel.value = Number(sel.value) + Number(sel2.value);
+         },
+        subtract: () => {
+            resSel.value = Number(sel.value) - Number(sel2.value);
+         }
+    }
 }
 
 
-
+const calculate = calculator();
+calculate.init('#num1', '#num2', '#result');
 
