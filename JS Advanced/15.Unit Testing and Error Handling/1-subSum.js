@@ -1,15 +1,24 @@
-function solve(numbers, start, end){
-    if(!Array.isArray(numbers)){
-        return NaN;
+function solve(arr, startIndex, endIndex) {
+    let sum = 0;
+
+    if (startIndex < 0) {
+        startIndex = 0;
     }
+    if (endIndex > arr.length - 1) {
+        endIndex = arr.length - 1;
+    }
+    for (let i = startIndex; i <= endIndex; i++) {
 
-    let startIndex = Math.max(start, 0);
-    let endIndex = Math.min(end, numbers.length - 1);
+        if (typeof arr[i] !== 'number') {
+            return NaN;
+        }
+       
+        sum += arr[i];
 
-    let subNumbers = numbers.slice(startIndex, endIndex + 1);
-    let sum = subNumbers.reduce((a, x) => a + Number(x), 0);
-   return sum;
+    }
+    return sum;
 
 }
 
-solve([10, 20, 30, 40, 50, 60], 3, 300);
+console.log(solve([10, 'twenty', 30, 40], 0, 2));
+console.log(solve([10, 20, 30, 40, 50, 60], 3, 300));
