@@ -13,6 +13,7 @@ function onsubmit(e) {
 
     const ul = createUl(townArr);
     render(ul, root);
+    input.reset();
 
 }
 
