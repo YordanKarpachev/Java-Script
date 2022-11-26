@@ -5,6 +5,7 @@ import { getUserData } from "./util.js";
 import { catalogView } from "./views/catalogView.js";
 import { createView } from "./views/createView.js";
 import { detailsView } from "./views/detailsView.js";
+import { editView } from "./views/editView.js";
 import { homeView } from "./views/homeView.js";
 import { loginView } from "./views/loginView.js";
 
@@ -22,7 +23,7 @@ page(middleware);
 page("/", homeView);
 page("/catalog", catalogView);
 page("/catalog/:id", detailsView);
-page("/edit/:id", detailsView);
+page("/edit/:id", editView);
 page("/login", loginView);
 page("/register", registerView);
 page("/create", createView);
