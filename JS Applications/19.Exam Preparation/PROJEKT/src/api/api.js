@@ -10,7 +10,7 @@ async function request(method, url, data) {
     };
 
     if (data !== undefined) {
-        options.headers  ["Content-Type"] = "application/json"
+        options.headers["Content-Type"] = "application/json"
         options.body = JSON.stringify(data);
     }
 

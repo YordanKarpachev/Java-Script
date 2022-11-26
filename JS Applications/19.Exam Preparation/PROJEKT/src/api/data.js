@@ -16,7 +16,7 @@ export function createPet(petData) {
 
 
 export function deleteById(id) {
-    return del("data/pets" + id);
+    return del("data/pets/" + id);
 
 }
 
