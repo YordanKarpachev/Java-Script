@@ -47,7 +47,7 @@ export const registerView = (ctx) => {
             alert("pass don^t match")
         }
         
-debugger
+
      await register(email, password)
         ctx.updateNav();
         ctx.page.redirect("/");

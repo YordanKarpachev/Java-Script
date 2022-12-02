@@ -7,6 +7,7 @@ import { loginView } from "./views/loginView.js";
 import { registerView } from "./views/registerView.js";
 import {updateNav} from "./views/nav.js"
 import { showDetails } from "./views/detailsView.js";
+import { editView } from "./views/editView.js";
 
 const main = document.getElementById("main-content")
 
@@ -20,7 +21,7 @@ page("/login", loginView);
 page("/register", registerView);
 page("/create", createView);
 page("/details/:id", showDetails);
-//page("/edit:id", console.log("EDIT ID"));
+page("/edit/:id",editView);
 
 page.start();
 

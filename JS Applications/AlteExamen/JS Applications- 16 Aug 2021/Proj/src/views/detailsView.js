@@ -62,7 +62,7 @@ export async function showDetails(ctx) {
     const id = ctx.params.id;
     const carte = await getById(id);
     const user = getUserData();
-    debugger
+
     const isOwner = Boolean(user && carte._ownerId == user._id)
 
     async function delEl() {

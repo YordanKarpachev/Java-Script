@@ -6,7 +6,7 @@ const nav = document.querySelector("header")
 
 const navTemplate = (hasUser, onLogout) => html`<h1><a class="home" href="#">GamesPlay</a></h1>
 <nav>
-    <a href="#">All games</a>
+    <a href="/catalog">All games</a>
 
     ${hasUser ? html` <div id="user">
         <a href="/create">Create Game</a>
